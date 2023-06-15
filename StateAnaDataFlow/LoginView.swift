@@ -8,33 +8,45 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @State private var name = ""
     @EnvironmentObject private var user: UserSettings
-    let validNumber = 3
+    
+    private let validationNumber = 3
+    
     var body: some View {
         VStack {
             HStack {
-                Spacer()
                 TextField("Enter your name...", text: $name)
                     .padding(.trailing, -60)
                 Text("\(name.count)")
                     .padding(.trailing, 30)
                     .foregroundColor(
-                        validationCondition() ? .green : .red
+                        verification() ? .green : .red
                     )
             }
-                .multilineTextAlignment(.center)
+            .multilineTextAlignment(.center)
+            
             Button(action: login) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
             }
-            .disabled(!validationCondition())
+            .disabled(!verification())
             
 
         }
     }
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}
+
+extension LoginView {
     
     private func login() {
         if !name.isEmpty {
@@ -43,13 +55,7 @@ struct LoginView: View {
         }
     }
     
-    private func validationCondition() -> Bool {
-        name.count >= validNumber
-    }
-}
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
+    private func verification() -> Bool {
+        name.count >= validationNumber
     }
 }

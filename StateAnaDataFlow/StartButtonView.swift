@@ -1,5 +1,5 @@
 //
-//  LogOutButtonView.swift
+//  StartButtonView.swift
 //  StateAnaDataFlow
 //
 //  Created by Александр Полочанин on 15.06.23.
@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct LogOutButtonView: View {
+struct StartButtonView: View {
     
-    let action: () -> Void
+    @ObservedObject var timer: TimeCounter
     
     var body: some View {
-        Button(action: action) {
-            Text("LogOut")
+        Button(action: timer.startTimer) {
+            Text(timer.buttonTitle)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
         }
         .frame(width: 200, height: 60)
-        .background(.blue)
+        .background(.red)
         .cornerRadius(20)
         .overlay {
             RoundedRectangle(cornerRadius: 20)
@@ -28,8 +28,8 @@ struct LogOutButtonView: View {
     }
 }
 
-struct LogOutButtonView_Previews: PreviewProvider {
+struct StartButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        LogOutButtonView(action: {})
+        StartButtonView(timer: TimeCounter())
     }
 }
