@@ -25,6 +25,10 @@ struct ContentView: View {
             ButtonView(timer: timer)
             
             Spacer()
+            
+            LogOutButtonView(action: {})
+                .padding(.bottom, 20)
+            
         }
     }
 }
@@ -38,7 +42,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ButtonView: View {
     @ObservedObject var timer: TimeCounter
-    
     var body: some View {
         Button(action: timer.startTimer) {
             Text(timer.buttonTitle)
