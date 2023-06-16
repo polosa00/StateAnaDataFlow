@@ -13,32 +13,16 @@ struct ContentView: View {
     @EnvironmentObject private var user: UserSettings
     @EnvironmentObject private var storageManager: StorageManager
 
-    
     var body: some View {
         VStack {
             Text("Hi, \(user.name)!")
                 .font(.largeTitle)
                 .padding(.top, 100)
-            Text(timer.counter.formatted())
-                .font(.largeTitle)
-                .padding(.top, 100)
-
-          
-            Spacer()
-            
             StartButtonView(timer: timer)
-            
-            Spacer()
-            
+                .padding(.bottom, 140)
             LogOutButtonView(action: logOut)
                 .padding(.bottom, 20)
-            
         }
-        .onAppear{
-           
-
-        }
-        
     }
 }
 
@@ -49,13 +33,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
 extension ContentView {
-    
     private func logOut() {
-        storageManager.deleteUser()
         user.isLogged = false
-      
+        storageManager.deleteUser()
     }
 }
 

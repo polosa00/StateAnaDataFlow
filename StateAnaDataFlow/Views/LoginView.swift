@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     @State private var name = ""
+    
     @EnvironmentObject private var user: UserSettings
     @EnvironmentObject private var storageManager: StorageManager
    
@@ -33,16 +34,10 @@ struct LoginView: View {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
-                    
                 }
             }
             .disabled(!verification())
-          
-            
-
         }
-        
-        
     }
 }
 

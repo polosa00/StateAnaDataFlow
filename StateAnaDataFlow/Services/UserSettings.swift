@@ -8,6 +8,7 @@
 import Foundation
 
 final class UserSettings: ObservableObject {
+   
     @Published var user: User
    
     lazy var name = user.name

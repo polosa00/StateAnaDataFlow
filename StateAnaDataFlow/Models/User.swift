@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  User.swift
 //  StateAnaDataFlow
 //
 //  Created by Александр Полочанин on 16.06.23.
