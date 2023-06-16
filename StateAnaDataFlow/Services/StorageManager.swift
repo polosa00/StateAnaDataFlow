@@ -17,7 +17,7 @@ class StorageManager: ObservableObject {
         isLoggedIn = true
     }
     
-    func getUser(user: User) -> User {
+    func getUser() -> User {
         User(name: userName, isLogged: isLoggedIn)
     }
     

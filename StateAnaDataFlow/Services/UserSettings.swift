@@ -8,7 +8,12 @@
 import Foundation
 
 final class UserSettings: ObservableObject {
-    @Published var isLoggedIn = false
+    @Published var user: User
+   
+    lazy var name = user.name
+    lazy var isLogged = user.isLogged
     
-    var name = ""
+    init() {
+        user = StorageManager().getUser()
+    }
 }

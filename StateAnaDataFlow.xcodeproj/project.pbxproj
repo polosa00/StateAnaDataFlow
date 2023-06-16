@@ -48,6 +48,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11BD995B2A3C7C1900DBAF02 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A88811552A3A1FFD00A4487D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		11BD995C2A3C7C2F00DBAF02 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				11BD99592A3C6DF500DBAF02 /* StorageManager.swift */,
+				A888115F2A3A388800A4487D /* TimeCounter.swift */,
+				A88811632A3A3FE800A4487D /* UserSettings.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		11BD995D2A3C7C4400DBAF02 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A88811532A3A1FFC00A4487D /* ContentView.swift */,
+				11BD99532A3BA36200DBAF02 /* LogOutButtonView.swift */,
+				11BD99552A3BA60000DBAF02 /* StartButtonView.swift */,
+				A88811612A3A3F0100A4487D /* LoginView.swift */,
+				A88811652A3A411000A4487D /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11BD995E2A3C7C5200DBAF02 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		11BD995F2A3C7C5E00DBAF02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11BD99572A3C6DA500DBAF02 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A88811452A3A1FFC00A4487D = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +113,11 @@
 		A88811502A3A1FFC00A4487D /* StateAnaDataFlow */ = {
 			isa = PBXGroup;
 			children = (
-				A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */,
-				A88811532A3A1FFC00A4487D /* ContentView.swift */,
-				11BD99532A3BA36200DBAF02 /* LogOutButtonView.swift */,
-				11BD99552A3BA60000DBAF02 /* StartButtonView.swift */,
-				A88811612A3A3F0100A4487D /* LoginView.swift */,
-				11BD99572A3C6DA500DBAF02 /* User.swift */,
-				11BD99592A3C6DF500DBAF02 /* StorageManager.swift */,
-				A88811652A3A411000A4487D /* RootView.swift */,
-				A888115F2A3A388800A4487D /* TimeCounter.swift */,
-				A88811632A3A3FE800A4487D /* UserSettings.swift */,
-				A88811552A3A1FFD00A4487D /* Assets.xcassets */,
+				11BD995E2A3C7C5200DBAF02 /* App */,
+				11BD995D2A3C7C4400DBAF02 /* Views */,
+				11BD995F2A3C7C5E00DBAF02 /* Models */,
+				11BD995C2A3C7C2F00DBAF02 /* Services */,
+				11BD995B2A3C7C1900DBAF02 /* Resources */,
 				A88811572A3A1FFD00A4487D /* Preview Content */,
 			);
 			path = StateAnaDataFlow;

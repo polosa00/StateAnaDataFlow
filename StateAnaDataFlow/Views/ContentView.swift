@@ -54,7 +54,7 @@ extension ContentView {
     
     private func logOut() {
         storageManager.deleteUser()
-        user.isLoggedIn = false
+        user.isLogged = false
       
     }
 }

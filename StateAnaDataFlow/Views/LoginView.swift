@@ -13,7 +13,7 @@ struct LoginView: View {
     @EnvironmentObject private var user: UserSettings
     @EnvironmentObject private var storageManager: StorageManager
    
-    private let validationNumber = 3
+    private let validationNumber = 2
     
     var body: some View {
         VStack {
@@ -56,11 +56,11 @@ extension LoginView {
     
     private func login() {
         user.name = name
-        user.isLoggedIn.toggle()
+        user.isLogged.toggle()
         storageManager.createUser(name: name)
     }
     
     private func verification() -> Bool {
-        name.count >= validationNumber
+        name.count > validationNumber
     }
 }
