@@ -11,7 +11,8 @@ struct LoginView: View {
     
     @State private var name = ""
     @EnvironmentObject private var user: UserSettings
-    
+    @EnvironmentObject private var storageManager: StorageManager
+   
     private let validationNumber = 3
     
     var body: some View {
@@ -19,6 +20,7 @@ struct LoginView: View {
             HStack {
                 TextField("Enter your name...", text: $name)
                     .padding(.trailing, -60)
+                    
                 Text("\(name.count)")
                     .padding(.trailing, 30)
                     .foregroundColor(
@@ -31,12 +33,16 @@ struct LoginView: View {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
+                    
                 }
             }
             .disabled(!verification())
+          
             
 
         }
+        
+        
     }
 }
 
@@ -49,10 +55,9 @@ struct LoginView_Previews: PreviewProvider {
 extension LoginView {
     
     private func login() {
-        if !name.isEmpty {
-            user.name = name
-            user.isLoggedIn.toggle()
-        }
+        user.name = name
+        user.isLoggedIn.toggle()
+        storageManager.createUser(name: name)
     }
     
     private func verification() -> Bool {

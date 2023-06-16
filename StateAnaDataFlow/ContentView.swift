@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @StateObject private var timer = TimeCounter()
     @EnvironmentObject private var user: UserSettings
+    @EnvironmentObject private var storageManager: StorageManager
+
     
     var body: some View {
         VStack {
@@ -19,7 +22,8 @@ struct ContentView: View {
             Text(timer.counter.formatted())
                 .font(.largeTitle)
                 .padding(.top, 100)
-            
+
+          
             Spacer()
             
             StartButtonView(timer: timer)
@@ -30,6 +34,11 @@ struct ContentView: View {
                 .padding(.bottom, 20)
             
         }
+        .onAppear{
+           
+
+        }
+        
     }
 }
 
@@ -42,8 +51,11 @@ struct ContentView_Previews: PreviewProvider {
 
 
 extension ContentView {
+    
     private func logOut() {
+        storageManager.deleteUser()
         user.isLoggedIn = false
+      
     }
 }
 

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RootView: View {
     @StateObject private var user = UserSettings()
-    
+    @StateObject private var storageManager = StorageManager()
+
     var body: some View {
         Group {
+            
             if user.isLoggedIn {
                 ContentView()
             } else {
@@ -19,6 +21,8 @@ struct RootView: View {
             }
         }
         .environmentObject(user)
+        .environmentObject(storageManager)
+        
     }
 }
 

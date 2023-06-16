@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		11BD99542A3BA36200DBAF02 /* LogOutButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD99532A3BA36200DBAF02 /* LogOutButtonView.swift */; };
 		11BD99562A3BA60000DBAF02 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD99552A3BA60000DBAF02 /* StartButtonView.swift */; };
+		11BD99582A3C6DA500DBAF02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD99572A3C6DA500DBAF02 /* User.swift */; };
+		11BD995A2A3C6DF500DBAF02 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BD99592A3C6DF500DBAF02 /* StorageManager.swift */; };
 		A88811522A3A1FFC00A4487D /* StateAnaDataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */; };
 		A88811542A3A1FFC00A4487D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88811532A3A1FFC00A4487D /* ContentView.swift */; };
 		A88811562A3A1FFD00A4487D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A88811552A3A1FFD00A4487D /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		11BD99532A3BA36200DBAF02 /* LogOutButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButtonView.swift; sourceTree = "<group>"; };
 		11BD99552A3BA60000DBAF02 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		11BD99572A3C6DA500DBAF02 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		11BD99592A3C6DF500DBAF02 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A888114E2A3A1FFC00A4487D /* StateAnaDataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateAnaDataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88811512A3A1FFC00A4487D /* StateAnaDataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAnaDataFlowApp.swift; sourceTree = "<group>"; };
 		A88811532A3A1FFC00A4487D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				11BD99532A3BA36200DBAF02 /* LogOutButtonView.swift */,
 				11BD99552A3BA60000DBAF02 /* StartButtonView.swift */,
 				A88811612A3A3F0100A4487D /* LoginView.swift */,
+				11BD99572A3C6DA500DBAF02 /* User.swift */,
+				11BD99592A3C6DF500DBAF02 /* StorageManager.swift */,
 				A88811652A3A411000A4487D /* RootView.swift */,
 				A888115F2A3A388800A4487D /* TimeCounter.swift */,
 				A88811632A3A3FE800A4487D /* UserSettings.swift */,
@@ -160,8 +166,10 @@
 				11BD99542A3BA36200DBAF02 /* LogOutButtonView.swift in Sources */,
 				A88811662A3A411000A4487D /* RootView.swift in Sources */,
 				A88811622A3A3F0100A4487D /* LoginView.swift in Sources */,
+				11BD995A2A3C6DF500DBAF02 /* StorageManager.swift in Sources */,
 				11BD99562A3BA60000DBAF02 /* StartButtonView.swift in Sources */,
 				A88811642A3A3FE800A4487D /* UserSettings.swift in Sources */,
+				11BD99582A3C6DA500DBAF02 /* User.swift in Sources */,
 				A88811522A3A1FFC00A4487D /* StateAnaDataFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
