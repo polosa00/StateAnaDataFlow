@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var timer = TimeCounter()
+    
     @EnvironmentObject private var user: UserSettings
     @EnvironmentObject private var storageManager: StorageManager
 

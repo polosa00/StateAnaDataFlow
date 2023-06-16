@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RootView: View {
+    
     @StateObject private var user = UserSettings()
     @StateObject private var storageManager = StorageManager()
 
